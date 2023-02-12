@@ -61,6 +61,7 @@ public class Market {
     }
 
     private void match(Order bid, Order ask) {
+        //若是限价取的卖方价格
         double price = ask.getType() == OrdType.LIMIT ? ask.getPrice() : bid.getPrice();
         long quantity = bid.getOpenQuantity() >= ask.getOpenQuantity() ? ask.getOpenQuantity() : bid.getOpenQuantity();
 

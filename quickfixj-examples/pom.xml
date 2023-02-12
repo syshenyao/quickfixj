@@ -42,6 +42,47 @@
 			<version>${slf4j.version}</version>
 			<scope>runtime</scope>
 		</dependency>
+		<dependency>
+			<groupId>com.cloudhopper.proxool</groupId>
+			<artifactId>proxool</artifactId>
+			<version>0.9.1</version>
+			<optional>true</optional>
+			<exclusions>
+				<!-- bug in proxool pom - should be test scope -->
+				<exclusion>
+					<groupId>avalon-framework</groupId>
+					<artifactId>avalon-framework-api</artifactId>
+				</exclusion>
+				<!-- we use slf4j which provides this API -->
+<!--				<exclusion>-->
+<!--					<groupId>commons-logging</groupId>-->
+<!--					<artifactId>commons-logging</artifactId>-->
+<!--				</exclusion>-->
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.cloudhopper.proxool</groupId>
+			<artifactId>proxool-cglib</artifactId>
+			<version>0.9.1</version>
+			<optional>true</optional>
+			<exclusions>
+				<!-- bug in proxool pom - should be test scope -->
+				<exclusion>
+					<groupId>avalon-framework</groupId>
+					<artifactId>avalon-framework-api</artifactId>
+				</exclusion>
+				<!-- we use slf4j which provides this API -->
+<!--				<exclusion>-->
+<!--					<groupId>commons-logging</groupId>-->
+<!--					<artifactId>commons-logging</artifactId>-->
+<!--				</exclusion>-->
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>8.0.27</version>
+		</dependency>
 	</dependencies>
 
 	<build>
